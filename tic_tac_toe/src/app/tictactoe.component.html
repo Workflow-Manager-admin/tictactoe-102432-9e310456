@@ -1,0 +1,31 @@
+<div class="tictactoe-container">
+  <div class="status">
+    <ng-container *ngIf="!winner && !draw">
+      Player <span class="player-mark">{{ currentPlayer }}</span>'s turn
+    </ng-container>
+    <ng-container *ngIf="winner">
+      <span class="winner">Player {{ winner }} wins!</span>
+    </ng-container>
+    <ng-container *ngIf="draw && !winner">
+      <span class="draw">It's a draw!</span>
+    </ng-container>
+  </div>
+  <div class="board">
+    <button
+      *ngFor="let square of board; index as i"
+      class="cell"
+      [ngClass]="{
+        'cell-x': getMark(i) === 'X',
+        'cell-o': getMark(i) === 'O'
+      }"
+      [disabled]="!!getMark(i) || !!winner || draw"
+      (click)="handleClick(i)"
+      aria-label="TicTacToe grid cell {{i + 1}}"
+    >
+      <span *ngIf="getMark(i)">{{ getMark(i) }}</span>
+    </button>
+  </div>
+  <button class="reset-btn" (click)="resetGame()">
+    Reset Game
+  </button>
+</div>
