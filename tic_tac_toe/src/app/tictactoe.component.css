@@ -1,0 +1,115 @@
+:host {
+  --primary-bg: #ffffff;
+  --secondary: #000000;
+  --accent: #2196f3;
+  --cell-size: 80px;
+  --cell-font: 2.3rem;
+  --status-font: 1.2rem;
+  --winner-color: #388e3c;
+  --draw-color: #f44336;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.tictactoe-container {
+  background: var(--primary-bg);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(33, 150, 243, 0.08), 0 1.5px 4px rgba(0,0,0,0.07);
+  padding: 2.5rem 2.5rem 1.7rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+}
+
+.status {
+  margin-bottom: 2rem;
+  font-size: var(--status-font);
+  color: var(--secondary);
+  text-align: center;
+  font-weight: 500;
+}
+
+.status .player-mark {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.status .winner {
+  color: var(--winner-color);
+  font-weight: bold;
+}
+
+.status .draw {
+  color: var(--draw-color);
+  font-weight: bold;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, var(--cell-size));
+  grid-template-rows: repeat(3, var(--cell-size));
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  font-size: var(--cell-font);
+  border-radius: 0.7rem;
+  border: 2px solid var(--accent);
+  color: var(--secondary);
+  background: var(--primary-bg);
+  cursor: pointer;
+  transition: background 0.12s, box-shadow 0.15s;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  outline: none;
+  box-shadow: 0 0.1rem 0.15rem rgba(33, 150, 243, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:hover:not(:disabled) {
+  background: #e3f2fd;
+}
+
+.cell-x {
+  color: var(--accent);
+  text-shadow: 0 1px 10px #cbeaff69;
+}
+
+.cell-o {
+  color: var(--secondary);
+  text-shadow: 0 1px 10px #cccccc40;
+}
+
+.cell:disabled {
+  background: #f2f2f2 !important;
+  cursor: default;
+  opacity: 1;
+}
+
+.reset-btn {
+  margin-top: 0.6rem;
+  padding: 0.5rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.15s, box-shadow 0.16s;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 8px #2196f326;
+  letter-spacing: 0.01rem;
+}
+.reset-btn:hover,
+.reset-btn:focus {
+  background: #1976d2;
+}
