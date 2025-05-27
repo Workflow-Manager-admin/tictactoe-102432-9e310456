@@ -262,3 +262,6 @@ main.server.mjs      | main.server      | 800 bytes |
 
 Application bundle generation complete. [1.538 seconds]
 
+Page reload sent to client(s).
+8:53:02 PM [vite] (client) ✨ new dependencies optimized: @angular/common
+8:53:02 PM [vite] (client) ✨ optimized dependencies changed. reloading
