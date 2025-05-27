@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 // PUBLIC_INTERFACE
 @Component({
   selector: 'app-tictactoe',
   templateUrl: './tictactoe.component.html',
   styleUrls: ['./tictactoe.component.css'],
-  standalone: true
+  standalone: true,
+  imports: [CommonModule]
 })
 export class TictactoeComponent {
   /** The 3x3 game board, flattened as an array of 9 elements. */
