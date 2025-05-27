@@ -28,3 +28,105 @@ Watch mode enabled. Watching for file changes...
 NOTE: Raw file sizes do not reflect development server per-request transformations.
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.17.0.2:3000/
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [1.391 seconds]
+
+▲ [WARNING] TS-998113: TictactoeComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:7:26:
+      7 │   imports: [RouterOutlet, TictactoeComponent],
+        ╵                           ~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/tictactoe.component.html:3:19:
+      3 │     <ng-container *ngIf="!winner && !draw">
+        ╵                    ~~~~
+
+  Error occurs in the template of component TictactoeComponent.
+
+    src/app/tictactoe.component.ts:6:15:
+      6 │   templateUrl: './tictactoe.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/tictactoe.component.html:6:19:
+      6 │     <ng-container *ngIf="winner">
+        ╵                    ~~~~
+
+  Error occurs in the template of component TictactoeComponent.
+
+    src/app/tictactoe.component.ts:6:15:
+      6 │   templateUrl: './tictactoe.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/tictactoe.component.html:9:19:
+      9 │     <ng-container *ngIf="draw && !winner">
+        ╵                    ~~~~
+
+  Error occurs in the template of component TictactoeComponent.
+
+    src/app/tictactoe.component.ts:6:15:
+      6 │   templateUrl: './tictactoe.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/tictactoe.component.html:15:7:
+      15 │       *ngFor="let square of board; index as i"
+         ╵        ~~~~~
+
+  Error occurs in the template of component TictactoeComponent.
+
+    src/app/tictactoe.component.ts:6:15:
+      6 │   templateUrl: './tictactoe.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/tictactoe.component.html:25:13:
+      25 │       <span *ngIf="getMark(i)">{{ getMark(i) }}</span>
+         ╵              ~~~~
+
+  Error occurs in the template of component TictactoeComponent.
+
+    src/app/tictactoe.component.ts:6:15:
+      6 │   templateUrl: './tictactoe.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'. [plugin angular-compiler]
+
+    src/app/tictactoe.component.html:17:6:
+      17 │       [ngClass]="{
+         ╵       ~~~~~~~~~~~~
+
+  Error occurs in the template of component TictactoeComponent.
+
+    src/app/tictactoe.component.ts:6:15:
+      6 │   templateUrl: './tictactoe.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'aria-label' since it isn't a known property of 'button'. [plugin angular-compiler]
+
+    src/app/tictactoe.component.html:23:6:
+      23 │       aria-label="TicTacToe grid cell {{i + 1}}"
+         ╵       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component TictactoeComponent.
+
+    src/app/tictactoe.component.ts:6:15:
+      6 │   templateUrl: './tictactoe.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
